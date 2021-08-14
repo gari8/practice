@@ -3,5 +3,9 @@ input = sys.stdin.readline
 a,b = map(int, input().split())
 
 if __name__ == '__main__':
-    s = a + (2*b)
-    print(s / 3)
+    if 0 < a and 0 < b:
+        print("Alloy")
+    elif a == 0 and 0 < b:
+        print("Silver")
+    else:
+        print("Gold")
