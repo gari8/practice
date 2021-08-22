@@ -1,11 +1,9 @@
 import sys
 input = sys.stdin.readline
-n = int(input())
-
+s = input()
+m = "Hello,World!"
 if __name__ == '__main__':
-    if n >= 212:
-        print(8)
-    elif n >= 126:
-        print(6)
+    if s.strip() == m.strip():
+        print("AC")
     else:
-        print(4)
+        print("WA")
