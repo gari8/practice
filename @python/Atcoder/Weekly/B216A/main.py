@@ -1,11 +1,12 @@
 import sys
+
 input = sys.stdin.readline
-n = int(input())
+x, y = map(int, input().split("."))
 
 if __name__ == '__main__':
-    if n >= 212:
-        print(8)
-    elif n >= 126:
-        print(6)
+    if 0 <= y <= 2:
+        print(str(x)+"-")
+    elif 7 <= y <= 9:
+        print(str(x)+"+")
     else:
-        print(4)
+        print(str(x))
