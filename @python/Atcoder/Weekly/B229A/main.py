@@ -1,22 +1,14 @@
 import sys
 
 input = sys.stdin.readline
-S, T, X = map(int, input().split())
+S1 = input()
+S2 = input()
+flag = True
 
 if __name__ == '__main__':
-    dist = 0
-    if T < S:
-        dist = T + (24 - S)
-    else:
-        dist = T - S
-
-    ansDist = 0
-    if X < S:
-        ansDist = X + (24 - S)
-    else:
-        ansDist = X - S
-
-    if dist <= ansDist:
+    f = S1[0] != S1[1] and S1[0] != S1[1]
+    f2 = S1[0] != S2[0] and S1[1] != S2[1]
+    if f and f2:
         print("No")
     else:
         print("Yes")

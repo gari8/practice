@@ -1,22 +1,18 @@
 import sys
 
 input = sys.stdin.readline
-S, T, X = map(int, input().split())
+A, B = map(int, input().split())
 
 if __name__ == '__main__':
-    dist = 0
-    if T < S:
-        dist = T + (24 - S)
-    else:
-        dist = T - S
+    flag = False
+    AS, BS = str(A)[::-1], str(B)[::-1]
+    N = str(min(A, B))
+    text = ""
+    for i in range(len(N)):
+        if int(AS[i]) + int(BS[i]) >= 10:
+            flag = True
 
-    ansDist = 0
-    if X < S:
-        ansDist = X + (24 - S)
+    if flag:
+        print("Hard")
     else:
-        ansDist = X - S
-
-    if dist <= ansDist:
-        print("No")
-    else:
-        print("Yes")
+        print("Easy")
